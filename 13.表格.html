@@ -1,1 +1,27 @@
+<html>
+    <head><title>表格</title></head>
+    <body>
+        <!--顯示2x3表格-->
+        <table border=1><!--邊框-->          
+            <tr><td>1</td><td>2</td><td>3</td></tr><!--表格顯示123-->
+            <tr><td>4</td><td>5</td><td>6</td></tr><!--表格顯示456-->
+            <!--<tr>表示一列   <td>表示單元-->
+        </table>
 
+        <table border=1>
+            <tr><td>1</td><td colspan=2>2 3</td></tr><!--使用colspan跨列-->
+            <tr><td>4</td><td>5</td><td>6</td></tr>
+        </table>
+        
+        <table border=1>
+            <tr><td rowspan=2>1 4</td><td>2</td><td>3</td></tr> <!--使用rowspan跨行-->
+            <tr>                      <td>5</td><td>6</td></tr>
+        </table>
+         
+         <table border=1>
+            <tr><td>1</td><td colspan=2 rowspan=2>2 3 5 6</td></tr><!--跨2列2欄-->
+            <tr><td>4</td>                                    </tr>
+            <tr><td>7</td><td>8</td><td>9</td></tr>
+        </table>
+    </body>
+</html>
