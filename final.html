@@ -1,64 +1,55 @@
 <html>
-
 <head>
     <title>Div-faculty-nav</title>
     <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>
     <script>
-    $(window).load(function () {
-        $('.flexslider').flexslider({
-            animation: "slide"
+    $(window).on('load', function () {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                slideshowSpeed: 3000, 
+                pauseOnHover: true    
+            });
         });
-    });
 </script>
     <style>
         body {
             margin: 0px;
         }
-        
         #b1 {
             background-color: lightgray;
             height: 100px;
             line-height: 100px; 
         }
-
         #b1 h1 {
             width: 400px;
             margin: auto; 
-            color: blue;
-            text-align: center;
-            
+            color: black;
+            text-align: center;            
         }
-
         #b2 {
             height: 50px;
-            background-color: gray;
+            background-color: black;
             color: white;
             display: flex;
             align-items: center;
             justify-content: space-around;
             padding: 0px 600px;
         }
-
         .b2-1 {
-            line-height: 50px;
-            
+            line-height: 50px;            
         }
-
         .b2-1:hover {
             background-color: rgb(106, 106, 106);
-            /*設定背景顏色*/
-        }
-
-        /*nav*/
+        }        
         .b2-1 ul {
             display: none;
-            position: absolute; /*絕對定位*/
-            z-index: 1;  /*設定層級，避免被其他元素蓋住*/
+            position: absolute; 
+            z-index: 1;  
             background-color: rgb(106, 106, 106);
             min-width: 100px;
-            list-style-type: none;  /*移除項目符號*/
+            list-style-type: none;  
         }
 
         .b2-1:hover ul {
@@ -82,15 +73,16 @@
         .b2-1:hover ul li:hover a {
             color: black;
         }
-
-        /*nav end*/
-
+        .flexslider .slides img {
+            width: 100%;
+            height: 900px; 
+            object-fit: cover; 
+            display: block;
+        }
         #b3 {
             height: 730px;
             background-image: url(https://github.com/shhuangmust/html/raw/111-1/slider1.JPG);
-
         }
-
         #b3 h2 {
             color: white;
             padding: 50px 150px;
@@ -104,20 +96,24 @@
             justify-content: space-around;
             padding: 0px 300px;
         }
-
         img {
-            width: 200px;
-            height: 300px;
-            
-
+            //width: 150px;
+            height: 140px;
         }
+        #b4 {
+            height: 140px;
+           //line-height: 70px;
+            //background-color: black;
 
+            color: black;
+            text-align: center;
+            margin: 0px;
+        }
         #b5 {
             height: 70px;
             line-height: 70px;
             background-color: gray;
         }
-
         #b5 h4 {
             color: white;
             text-align: center;
@@ -128,42 +124,59 @@
 
 <body>
     <div id='b1'>
-        <h1>明新科技大學</h1>
+        <h1>夢幻車庫</h1>
     </div>
     <div id="b2">
-        <div class="b2-1">首頁</div>
-        <div class="b2-1">系所簡介</div>
-        <div class="b2-1">教師簡介
+        <div class="b2-1">Mercedes-Benz
             <ul>
-                <li><a href="#">黃老師</a></li>
-                <li><a href="#">應老師</a></li>
-                <li><a href="#">李老師</a></li>
+                <li><a href="#"style="color: #00D2BE">CLE 53</a></li>
+                <li><a href="#"style="color: #00D2BE">GT 63S</a></li>
+                <li><a href="#"style="color: #00D2BE">G63</a></li>
+            </ul>
+        </div>
+        <div class="b2-1">BMW
+            <ul>
+                <li><a href="#"style="color: DeepSkyBlue">M4</a></li>
+                <li><a href="#"style="color: DeepSkyBlue">M2</a></li>
+                <li><a href="#"style="color: DeepSkyBlue">X6M</a></li>
             </ul>
         </div>
 
-        <div class="b2-1">聯絡資訊</div>
+        <div class="b2-1">Porsche
+            <ul>
+                <li><a href="#" style="color: gold">718 Spyder RS</a></li>
+                <li><a href="#" style="color: gold">911 GT3 RS</a></li>
+                <li><a href="#" style="color: gold">911 Turbo S </a></li>
+            </ul>
+        </div>
+
+        <div class="b2-1">Ferrari
+    <ul>
+        <li><a href="#" style="color: red">296 GTB</a></li>
+        <li><a href="#" style="color: red">SF90 Stradale</a></li>
+        <li><a href="#" style="color: red">Roma Spider</a></li>
+    </ul>
+</div>
     </div>
     <div class="slider">
         <div class="flexslider">
             <ul class="slides">
-                <li><img src="https://github.com/shhuangmust/html/raw/111-1/slider1.JPG" /></li>
-                <li><img src="https://github.com/shhuangmust/html/raw/111-1/slider2.JPG" /></li>
-                <li><img src="https://github.com/shhuangmust/html/raw/111-1/slider3.JPG" /></li>
-            </ul>
+                <li><img src="https://github.com/yukan05/New-repository/blob/main/GT%2063Sjpg.jpg?raw=true" /></li>
+                <li><img src="https://github.com/yukan05/New-repository/blob/main/2023-BMW-M2-by-Stephen-Rivers-for-Carscoops-23-copytrtret.jpg?raw=true" /></li>
+                <li><img src="https://github.com/yukan05/New-repository/blob/main/911%20GT3%20RSwebp.webp?raw=true" /></li>
+                <li><img src="https://github.com/yukan05/New-repository/blob/main/SF90.jpg?raw=true" /></li>                
         </div>
     </div>
-    <div id="b3">
-        <h2>加入明新 成為明星</h2>
     </div>
-    <div id="b4">
-        <img src=https://github.com/shhuangmust/html/blob/master/faculty1.jpg?raw=true>
-        <img src=https://github.com/shhuangmust/html/blob/master/faculty2.jpg?raw=true>
-        <img src=https://github.com/shhuangmust/html/blob/master/faculty3.jpg?raw=true>
+     <div id="b4">
+        <img src=https://github.com/yukan05/New-repository/blob/main/Mercedes-Logo.svg.png?raw=true>
+        <img src=https://github.com/yukan05/New-repository/blob/main/bmw-logo-1997.jpg?raw=true>        
+        <h4><img src=https://github.com/yukan05/New-repository/blob/main/458707679_825640086346934_5036978890175998839_n.jpg?raw=true>     
+        <h4><img src=https://github.com/yukan05/New-repository/blob/main/logo2.jpg?raw=true   >  
     </div>
+
     <div id="b5">
-        <h4>明新科技大學資訊管理系 版權所有© All Rights Reserved. Designed and Maintained by IM MUST</h4>
+        <h4>夢幻車庫 Dream Garage © 2025. Designed by 劉承旭</h4>
     </div>
 </body>
-
-
 </html>
